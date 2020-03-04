@@ -1,0 +1,10 @@
+Company|string|40|Y|1;1||"The company or business unit name for which the relationship is set up.<br>Options:<br>the company/business unit from where the relationship is created and<br>all its child business units (no parent company/business units are displayed)<br>COMPANY_ID mapped to COMPANY table for company name"
+Relationship_Type|string|16|Y|1;1|Business Partner, Carrier|Relationship type as either business partner or carrier
+Relationship_With_Company_Name|string|40|Y|1;1||"Name of the company with which the relationship is set up.<br>The company names that can be selected depend on the option selected for the field Relationship Type."
+Relationship_ID|string|10|Y|1;1||"A unique identifier for the relationship.<br>The Relationship ID is unique for each host company across all its business units."
+Description|string|40|Y|1;1||"Brief description of the relationship.<br>Though the db length supports 60 characters, please ensure that the<br>description length does <br>not exceed 35 as this information is updated in the VENDOR_MASTER and BUSINESS_PARTNER tables which are not having a length of 60."
+Is_Enabled|string|8|Y|1;1|Enabled,Disabled|Provides options for saving the relationship as enabled or disabled.
+Business_Partner_Type|string|9|Y|1;1|Vendor,Buyer,Both,Hub1,Hub2,Agent,Inspector,Store,3PL1|"Indicates the business partner type. Applicable only for Relationship Type - Business Partner. <br><br>Valid values from BUSINESS_PARTNER_TYPE table"
+Comm_Method|string|9|Y|1;1|Auto-Fax,EDI,e-mail,Facsimile,PDA,Telephone,Web,XML,Other|"ndicates the method of communication. Applicable only for Relationship Type - Business Partner. <br><br>Valid values from COMM_METHOD_UCL table"
+Accredited|string|5|N|0;1||"Designates the business partner as credentialed.<br>Applicable only for Relationship Type as Business Partner"
+Business_Number|string|35|N|0;1||"The business partner’s business number to be used on cost of goods invoices (COGI).<br>Applicable only for Relationship Type as Business Partner"
